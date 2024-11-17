@@ -4,13 +4,11 @@ on:
   push:
     branches:
       - main
-      - ac_service
-      - develop
+
   pull_request:
     branches:
       - main
-      - ac_service
-      - develop
+
 
 jobs:
   build:
@@ -35,7 +33,7 @@ jobs:
       - name: Build Android APK
         run: flutter build apk --release
 
-      #
+
 
       # Upload artifacts to GitHub releases
       - name: Push to Releases
