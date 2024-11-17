@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:image/image.dart' as img;
 import 'package:image_picker/image_picker.dart';
 import 'package:skin_detection_app/approutes.dart';
+import 'package:skin_detection_app/page/NearByDoctor/NearbyDoctor.dart';
 import 'package:tflite_flutter/tflite_flutter.dart';
 
 import 'SkinconditionDetailPage/SkinConditionDetail.dart';
@@ -255,7 +256,25 @@ class _HomepageState extends State<Homepage> {
                             ),
                           ),
                         ),
+                        const SizedBox(height: 16),
+                        ElevatedButton.icon(
+                          onPressed: () {
+                            Get.to(Nearbydoctor());
+                          },
+                          icon: const Icon(Icons.map_sharp),
+                          label: const Text('See NearBy Doctors'),
+                          style: ElevatedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 24,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        ),
                       ],
+
                     ),
                   ),
                 ),

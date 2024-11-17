@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:skin_detection_app/page/HomePage.dart';
 import 'package:skin_detection_app/page/MainScreen/mainScreen.dart';
 
 import 'approutes.dart';
