@@ -1,6 +1,8 @@
 // nearby_doctor_controller.dart
 import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:geolocator/geolocator.dart';
 import 'dart:convert';
@@ -125,27 +127,87 @@ class NearbyDoctorController extends GetxController {
 
       currentLocation.value = position;
       await fetchNearbyDoctors();
+      showLocationSuccess(); // Show success message
     } catch (e) {
       handleLocationError(e);
     }
   }
   void handleLocationError(dynamic error) {
     String errorMessage = 'Failed to get current location';
+    String errorTitle = 'Location Error';
 
     if (error is TimeoutException) {
       errorMessage = 'Location request timed out. Please try again.';
+      errorTitle = 'Timeout Error';
     } else if (error is LocationServiceDisabledException) {
       errorMessage = 'Location services are disabled. Please enable them in settings.';
+      errorTitle = 'Service Disabled';
     } else if (error.toString().contains('Permission denied')) {
       errorMessage = 'Location permission denied. Please grant permission in settings.';
+      errorTitle = 'Permission Denied';
     }
 
     locationError.value = errorMessage;
+
     Get.snackbar(
-      'Location Error',
+      errorTitle,
       errorMessage,
       snackPosition: SnackPosition.BOTTOM,
       duration: const Duration(seconds: 5),
+      backgroundColor: Colors.red.shade100,
+      colorText: Colors.red.shade900,
+      icon: const Icon(
+        Icons.location_off,
+        color: Colors.red,
+      ),
+      mainButton: TextButton(
+        onPressed: () {
+          Get.closeCurrentSnackbar();
+          if (error is LocationServiceDisabledException) {
+            Geolocator.openLocationSettings();
+          } else if (error.toString().contains('Permission denied')) {
+            Geolocator.openAppSettings();
+          } else {
+            getCurrentLocation(); // Retry getting location
+          }
+        },
+        child: Text(
+          error is LocationServiceDisabledException || error.toString().contains('Permission denied')
+              ? 'Open Settings'
+              : 'Retry',
+          style: const TextStyle(color: Colors.red),
+        ),
+      ),
+      borderRadius: 8,
+      margin: const EdgeInsets.all(8),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      isDismissible: true,
+      dismissDirection: DismissDirection.horizontal,
+      forwardAnimationCurve: Curves.easeOutBack,
+      reverseAnimationCurve: Curves.easeInBack,
+      overlayBlur: 0.0,
+      overlayColor: Colors.transparent,
+      snackStyle: SnackStyle.FLOATING,
+    );
+  }
+
+  // Optional: Add this method to show a success snackbar when location is successfully obtained
+  void showLocationSuccess() {
+    Get.snackbar(
+      'Location Updated',
+      'Successfully obtained your current location',
+      snackPosition: SnackPosition.BOTTOM,
+      duration: const Duration(seconds: 3),
+      backgroundColor: Colors.green.shade100,
+      colorText: Colors.green.shade900,
+      icon: const Icon(
+        Icons.location_on,
+        color: Colors.green,
+      ),
+      borderRadius: 8,
+      margin: const EdgeInsets.all(8),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      snackStyle: SnackStyle.FLOATING,
     );
   }
   Future<void> fetchNearbyDoctors() async {
