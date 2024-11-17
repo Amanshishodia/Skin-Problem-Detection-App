@@ -1,0 +1,405 @@
+{
+  "Eczema": {
+    "description": "A chronic inflammatory skin condition that causes the skin to become red, itchy, and inflamed. It's a common condition that can occur at any age but is particularly common in children.",
+    "symptoms": [
+      "Dry, cracked skin",
+      "Intense itching, especially at night",
+      "Red or brownish-gray patches",
+      "Small, raised bumps that may leak fluid",
+      "Thickened, scaly skin",
+      "Raw, sensitive skin from scratching"
+    ],
+    "treatments": [
+      "Moisturizing regularly with fragrance-free products",
+      "Topical corticosteroids to reduce inflammation",
+      "Oral antihistamines for severe itching",
+      "Prescription topical medications (tacrolimus, pimecrolimus)",
+      "Phototherapy (UV light treatment)",
+      "Wet dressings and bandages"
+    ],
+    "preventiveMeasures": [
+      "Identify and avoid trigger factors",
+      "Use mild soaps and detergents",
+      "Maintain optimal humidity levels",
+      "Wear soft, breathable fabrics",
+      "Keep fingernails short to prevent scratching damage",
+      "Practice good skin care routine"
+    ],
+    "riskFactors": [
+      "Family history of eczema",
+      "Asthma or hay fever",
+      "Living in urban areas or dry climates",
+      "Exposure to harsh environmental conditions"
+    ]
+  },
+  "Melanoma": {
+    "description": "The most serious type of skin cancer that develops in melanocytes (cells that produce melanin). Early detection is crucial for successful treatment and survival rates.",
+    "symptoms": [
+      "Asymmetrical moles or marks",
+      "Borders that are irregular or jagged",
+      "Color variations within the same mole",
+      "Diameter larger than 6 millimeters",
+      "Evolution or changes in size, shape, or color",
+      "New moles or skin changes"
+    ],
+    "treatments": [
+      "Wide excision surgery to remove the melanoma",
+      "Sentinel lymph node biopsy",
+      "Immunotherapy to boost immune response",
+      "Targeted therapy for specific gene mutations",
+      "Radiation therapy for advanced cases",
+      "Regular follow-up and monitoring"
+    ],
+    "preventiveMeasures": [
+      "Regular skin self-examinations",
+      "Annual professional skin checks",
+      "Use broad-spectrum sunscreen (SPF 30+)",
+      "Avoid tanning beds and sun lamps",
+      "Wear protective clothing and sunglasses",
+      "Seek shade during peak UV hours (10am-4pm)"
+    ],
+    "riskFactors": [
+      "Fair skin, light hair, and light eyes",
+      "History of severe sunburns",
+      "Family history of melanoma",
+      "Multiple moles or unusual moles",
+      "Weakened immune system"
+    ]
+  },
+  "Atopic Dermatitis": {
+    "description": "A chronic form of eczema that makes skin red and itchy. It's most common in children but can occur at any age. Tends to flare periodically and may be accompanied by asthma or hay fever.",
+    "symptoms": [
+      "Red to brownish-gray patches",
+      "Severe itching, especially at night",
+      "Small, raised bumps",
+      "Thickened, cracked, or scaly skin",
+      "Raw, sensitive skin from scratching",
+      "Areas of swelling"
+    ],
+    "treatments": [
+      "Regular use of moisturizers",
+      "Topical corticosteroids",
+      "Topical calcineurin inhibitors",
+      "Oral antihistamines",
+      "Phototherapy",
+      "Biological drugs for severe cases"
+    ],
+    "preventiveMeasures": [
+      "Moisturize skin at least twice daily",
+      "Identify and avoid triggers",
+      "Take shorter showers with lukewarm water",
+      "Use gentle soaps and cleansers",
+      "Pat skin dry gently",
+      "Manage stress levels"
+    ],
+    "riskFactors": [
+      "Family history of atopic conditions",
+      "Living in urban areas",
+      "Exposure to certain foods or allergens",
+      "Cold or dry climate"
+    ]
+  },
+  "Basal Cell Carcinoma": {
+    "description": "The most common type of skin cancer. It begins in the basal cells of the epidermis and rarely spreads to other parts of the body, but can be disfiguring if not treated promptly.",
+    "symptoms": [
+      "Pearly, waxy bump",
+      "Flat, flesh-colored or brown scar-like lesion",
+      "Bleeding or scabbing sore that heals and returns",
+      "Small, pink or red growth with rolled edges",
+      "Areas that ooze or crust",
+      "Itching or tenderness in affected area"
+    ],
+    "treatments": [
+      "Surgical excision",
+      "Mohs micrographic surgery",
+      "Curettage and electrodesiccation",
+      "Cryosurgery",
+      "Topical medications",
+      "Photodynamic therapy"
+    ],
+    "preventiveMeasures": [
+      "Daily use of broad-spectrum sunscreen",
+      "Wearing protective clothing",
+      "Regular skin examinations",
+      "Avoiding peak sun hours",
+      "Using UV-protective eyewear",
+      "Avoiding tanning beds"
+    ],
+    "riskFactors": [
+      "Chronic sun exposure",
+      "Fair skin",
+      "Age over 50",
+      "Previous skin cancer",
+      "Radiation therapy exposure"
+    ]
+  },
+  "Benign Keratosis-like Lesions": {
+    "description": "Non-cancerous skin growths that commonly appear as people age. They're harmless but can sometimes resemble more serious skin conditions.",
+    "symptoms": [
+      "Waxy, scaly, slightly raised growths",
+      "Light brown to black coloration",
+      "Round or oval shape",
+      "Varying size from tiny to over 1 inch",
+      "Appears 'stuck on' the skin",
+      "May be itchy"
+    ],
+    "treatments": [
+      "Cryotherapy (freezing)",
+      "Curettage (scraping)",
+      "Electrocautery (burning)",
+      "Laser therapy",
+      "No treatment if asymptomatic",
+      "Regular monitoring"
+    ],
+    "preventiveMeasures": [
+      "Sun protection",
+      "Regular skin checks",
+      "Documentation of changes",
+      "Avoiding skin irritation",
+      "Gentle skin care routine"
+    ],
+    "riskFactors": [
+      "Age over 40",
+      "Genetic predisposition",
+      "Sun exposure",
+      "Hormonal changes",
+      "Pregnancy"
+    ]
+  },
+  "Psoriasis pictures Lichen Planus": {
+    "description": "Inflammatory conditions affecting the skin. Psoriasis causes rapid skin cell growth leading to thick, scaly patches, while Lichen Planus causes flat-topped, itchy purple bumps.",
+    "symptoms": [
+      "Red patches covered with silvery scales (psoriasis)",
+      "Purple, itchy, flat bumps (lichen planus)",
+      "Dry, cracked skin that may bleed",
+      "Itching and burning sensation",
+      "Nail changes",
+      "Scalp involvement"
+    ],
+    "treatments": [
+      "Topical corticosteroids",
+      "Vitamin D analogs",
+      "Oral medications",
+      "Phototherapy",
+      "Biologics for severe cases",
+      "Antihistamines for itching"
+    ],
+    "preventiveMeasures": [
+      "Stress management",
+      "Avoid skin injury",
+      "Regular moisturizing",
+      "Gentle skin care",
+      "Avoiding triggers",
+      "Maintaining a healthy lifestyle"
+    ],
+    "riskFactors": [
+      "Genetic predisposition",
+      "Stress",
+      "Certain medications",
+      "Immune system disorders",
+      "Environmental factors"
+    ]
+  },
+  "Seborrheic Keratoses": {
+    "description": "Common noncancerous skin growths that appear with age. They can look concerning but are harmless and don't become cancerous.",
+    "symptoms": [
+      "Waxy, scaly growths",
+      "Brown, black or light tan color",
+      "'Stuck on' appearance",
+      "Round or oval shape",
+      "Varying size",
+      "May be slightly raised"
+    ],
+    "treatments": [
+      "Cryotherapy",
+      "Curettage",
+      "Electrocautery",
+      "Shave excision",
+      "Laser treatment",
+      "Observation if asymptomatic"
+    ],
+    "preventiveMeasures": [
+      "Regular skin checks",
+      "Gentle skin care",
+      "Sun protection",
+      "Documentation of changes",
+      "Professional evaluation of concerning lesions"
+    ],
+    "riskFactors": [
+      "Advanced age",
+      "Family history",
+      "Sun exposure",
+      "Pregnancy",
+      "Hormonal changes"
+    ]
+  },
+  "Tinea Ringworm Candidiasis": {
+    "description": "Common fungal infections affecting the skin. Ringworm causes ring-shaped rashes, while Candidiasis typically causes red, itchy rashes in warm, moist areas of the body.",
+    "symptoms": [
+      "Ring-shaped rash (ringworm)",
+      "Red, itchy patches",
+      "Scaly or cracked skin",
+      "Burning sensation",
+      "Blisters or pustules",
+      "Edges may be raised and expanding"
+    ],
+    "treatments": [
+      "Antifungal creams",
+      "Oral antifungal medications",
+      "Medicated shampoos",
+      "Keeping affected areas dry",
+      "Regular cleaning and hygiene",
+      "Prevention of spread"
+    ],
+    "preventiveMeasures": [
+      "Keep skin clean and dry",
+      "Avoid sharing personal items",
+      "Wear breathable fabrics",
+      "Change wet clothing promptly",
+      "Practice good hygiene",
+      "Regular washing of bedding"
+    ],
+    "riskFactors": [
+      "Excessive sweating",
+      "Tight clothing",
+      "Weak immune system",
+      "Contact with infected individuals",
+      "Poor hygiene"
+    ]
+  },
+  "Warts Molluscum": {
+    "description": "Viral infections of the skin. Warts are caused by HPV, while Molluscum Contagiosum is caused by a poxvirus. Both are contagious but generally harmless.",
+    "symptoms": [
+      "Small, flesh-colored bumps",
+      "Rough surface (warts)",
+      "Smooth, round bumps (molluscum)",
+      "May appear in clusters",
+      "Mild itching",
+      "Can spread to other areas"
+    ],
+    "treatments": [
+      "Cryotherapy",
+      "Topical medications",
+      "Curettage",
+      "Laser therapy",
+      "Natural remedies",
+      "Watchful waiting (may resolve naturally)"
+    ],
+    "preventiveMeasures": [
+      "Avoid touching or scratching lesions",
+      "Practice good hygiene",
+      "Avoid sharing personal items",
+      "Keep affected areas clean and dry",
+      "Cover lesions when possible"
+    ],
+    "riskFactors": [
+      "Direct contact with infected individuals",
+      "Weakened immune system",
+      "Swimming pools and communal areas",
+      "Skin-to-skin contact",
+      "Sharing personal items"
+    ]
+  },
+  "Allergic Contact Dermatitis": {
+    "description": "An inflammatory skin condition caused by contact with allergens. It results in red, itchy rashes where the skin has been exposed to the triggering substance.",
+    "symptoms": [
+      "Red, itchy rash",
+      "Swelling and burning",
+      "Blisters that may weep",
+      "Dry, cracked skin",
+      "Pain or tenderness",
+      "Clearly defined affected area"
+    ],
+    "treatments": [
+      "Avoiding allergen exposure",
+      "Topical corticosteroids",
+      "Oral antihistamines",
+      "Cool compresses",
+      "Calamine lotion",
+      "Oatmeal baths"
+    ],
+    "preventiveMeasures": [
+      "Identify and avoid triggers",
+      "Wear protective clothing",
+      "Use hypoallergenic products",
+      "Patch testing for allergens",
+      "Regular skin care routine",
+      "Maintain skin barrier"
+    ],
+    "riskFactors": [
+      "Previous allergic reactions",
+      "Occupation exposure",
+      "Environmental factors",
+      "Genetic predisposition",
+      "Compromised skin barrier"
+    ]
+  },
+  "Neurodermatitis": {
+    "description": "A chronic skin condition characterized by intense itching and scratching, leading to thick, leathery skin patches. Often triggered by stress or anxiety.",
+    "symptoms": [
+      "Intense itching",
+      "Thick, leathery skin patches",
+      "Raised, red patches",
+      "Scaling or flaking",
+      "Pain or burning",
+      "Changes in skin color"
+    ],
+    "treatments": [
+      "Topical corticosteroids",
+      "Anti-itch medications",
+      "Stress management techniques",
+      "Moisturizers",
+      "Light therapy",
+      "Psychological support"
+    ],
+    "preventiveMeasures": [
+      "Stress management",
+      "Regular moisturizing",
+      "Avoiding triggers",
+      "Keeping nails trimmed",
+      "Cool compresses when itchy",
+      "Breaking the itch-scratch cycle"
+    ],
+    "riskFactors": [
+      "Anxiety or stress",
+      "Other skin conditions",
+      "Family history",
+      "Environmental factors",
+      "Certain medications"
+    ]
+  },
+  "Normal": {
+    "description": "Healthy skin without any significant dermatological conditions. Regular skin care and protection are important for maintaining skin health.",
+    "symptoms": [
+      "Even skin tone",
+      "Smooth texture",
+      "No unusual marks or growths",
+      "Normal elasticity",
+      "Proper moisture balance",
+      "No persistent itching or discomfort"
+    ],
+    "treatments": [
+      "Regular cleansing",
+      "Daily moisturizing",
+      "Sun protection",
+      "Healthy diet",
+      "Adequate hydration",
+      "Regular exercise"
+    ],
+    "preventiveMeasures": [
+      "Daily sun protection",
+      "Regular skin checks",
+      "Proper hydration",
+      "Balanced diet",
+      "Adequate sleep",
+      "Stress management"
+    ],
+    "riskFactors": [
+      "Excessive sun exposure",
+      "Poor nutrition",
+      "Dehydration",
+      "Lack of sleep",
+      "Environmental pollutants"
+    ]
+  }
+}

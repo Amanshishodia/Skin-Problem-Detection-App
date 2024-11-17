@@ -1,9 +1,13 @@
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:image/image.dart' as img;
 import 'package:image_picker/image_picker.dart';
+import 'package:skin_detection_app/approutes.dart';
 import 'package:tflite_flutter/tflite_flutter.dart';
+
+import 'SkinconditionDetailPage/SkinConditionDetail.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -17,6 +21,7 @@ class _HomepageState extends State<Homepage> {
   final ImagePicker _imagePicker = ImagePicker();
   Interpreter? _interpreter;
   String _result = '';
+  String _predictedCondition = '';
   bool _isProcessing = false;
 
   // Updated class labels with proper formatting
@@ -141,23 +146,29 @@ class _HomepageState extends State<Homepage> {
       double maxProb = probabilities[0];
       int predictedClassIndex = 0;
 
+
+
+
       for (int i = 1; i < probabilities.length; i++) {
         if (probabilities[i] > maxProb) {
           maxProb = probabilities[i];
           predictedClassIndex = i;
         }
-      }
-
-      if (mounted) {
+      }if (mounted) {
         setState(() {
           _result = 'Prediction: ${_classLabels[predictedClassIndex]}\n'
               'Confidence: ${(maxProb * 100).toStringAsFixed(1)}%';
+          _predictedCondition = _classLabels[predictedClassIndex];
         });
 
-        debugPrint('Model output: $probabilities');
-        debugPrint('Predicted class: ${_classLabels[predictedClassIndex]}');
-        debugPrint('Confidence: ${(maxProb * 100).toStringAsFixed(1)}%');
+
+
+
       }
+
+
+
+
     } catch (e) {
       debugPrint('Error during classification: $e');
       _showError('Failed to analyze image. Please try again.');
@@ -217,13 +228,34 @@ class _HomepageState extends State<Homepage> {
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: Text(
-                      _result,
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      textAlign: TextAlign.center,
+                    child: Column(
+                      children: [
+                        Text(
+                          _result,
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 16),
+                        ElevatedButton.icon(
+                          onPressed: () {
+                            Get.toSkinConditionDetail(_predictedCondition);
+                          },
+                          icon: const Icon(Icons.info_outline),
+                          label: const Text('See Detailed Description'),
+                          style: ElevatedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 24,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
