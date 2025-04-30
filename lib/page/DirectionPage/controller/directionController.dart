@@ -26,7 +26,7 @@ class DirectionsController extends GetxController {
   Set<Polyline> get polylines => _polylines.value;
 
   // Replace this with your actual API key
-  static const String apiKey = 'AlzaSy8OStuVVdb8dLxR-O02-c5L225XYQBH7tU';
+  static const String apiKey = 'AlzaSyLLo_LNywH6Kpl2bNdurZwpA-zQSM5HC2b';
 
   @override
   void onInit() {

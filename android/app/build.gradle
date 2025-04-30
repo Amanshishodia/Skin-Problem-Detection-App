@@ -52,4 +52,5 @@ dependencies {
     // Add these dependencies for better Android compatibility
  //   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.multidex:multidex:2.0.1'
+
 }

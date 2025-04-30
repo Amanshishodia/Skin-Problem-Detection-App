@@ -43,6 +43,7 @@ dependencies:
   tflite_flutter: ^0.11.0
   google_maps_flutter: ^2.10.0
   http: ^1.2.2
+  lottie: ^3.3.1
 
 dev_dependencies:
   flutter_test:
