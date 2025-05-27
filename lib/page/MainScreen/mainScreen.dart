@@ -17,13 +17,8 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text("Skin Disease Detection"),
-        ),
-        body: Homepage(
+        body: Homepage(),
 
-        ),
-        drawer: const NavigatorDrawer(),
       ),
     );
   }

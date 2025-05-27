@@ -8,6 +8,7 @@ import 'package:skin_detection_app/approutes.dart';
 import 'package:skin_detection_app/page/NearByDoctor/NearbyDoctor.dart';
 import 'package:tflite_flutter/tflite_flutter.dart';
 import 'package:lottie/lottie.dart';
+import '../NavigationDrawer/navigatorDrawer.dart';
 import 'NearByDoctor/result_screen.dart';
 
 class Homepage extends StatefulWidget {
@@ -208,9 +209,10 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      drawer: const NavigatorDrawer(),
       body: Stack(
         children: [
-          // Background gradient
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -220,8 +222,6 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
               ),
             ),
           ),
-
-          // Content
           SafeArea(
             child: SingleChildScrollView(
               child: Padding(
@@ -229,49 +229,44 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    // Header
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20, bottom: 30),
-                      child: Row(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(0.3),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: const Icon(
-                              Icons.health_and_safety,
-                              color: Colors.white,
-                              size: 32,
-                            ),
+                    Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.3),
+                            borderRadius: BorderRadius.circular(12),
                           ),
-                          const SizedBox(width: 12),
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'SkinScan',
-                                style: TextStyle(
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                'AI-powered skin analysis',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.white70,
-                                ),
-                              ),
-                            ],
+                          child: const Icon(
+                            Icons.health_and_safety,
+                            color: Colors.white,
+                            size: 32,
                           ),
-                        ],
-                      ),
+                        ),
+                        const SizedBox(width: 12),
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'SkinScan',
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Text(
+                              'AI-powered skin analysis',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.white70,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-
-                    // Image Upload Card
+                    const SizedBox(height: 40),
                     SlideTransition(
                       position: Tween<Offset>(
                         begin: const Offset(0, 0.5),
@@ -440,8 +435,6 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
                     ),
 
                     const SizedBox(height: 24),
-
-                    // Information Cards
                     SlideTransition(
                       position: Tween<Offset>(
                         begin: const Offset(0, 0.8),
@@ -467,28 +460,28 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
 
                             // Common skin conditions cards
                             SizedBox(
-                              height: 160,
+                              height: 200,
                               child: ListView(
                                 scrollDirection: Axis.horizontal,
                                 children: [
                                   _buildConditionCard(
                                     'Eczema',
-                                    'assets/images/eczema.jpg',
+                                    'assets/images/eczema.png',
                                     'A condition causing skin to become inflamed, itchy, red, cracked, and rough.',
                                   ),
                                   _buildConditionCard(
                                     'Melanoma',
-                                    'assets/images/melanoma.jpg',
+                                    'assets/images/melanoma.png',
                                     'The most dangerous form of skin cancer that develops from pigment-producing cells.',
                                   ),
                                   _buildConditionCard(
                                     'Psoriasis',
-                                    'assets/images/psoriasis.jpg',
+                                    'assets/images/psoriasis.png',
                                     'A skin condition that causes red, flaky, crusty patches covered with silvery scales.',
                                   ),
                                   _buildConditionCard(
                                     'Atopic Dermatitis',
-                                    'assets/images/dermatitis.jpg',
+                                    'assets/images/dermatitis.png',
                                     'A chronic condition that makes skin red and itchy.',
                                   ),
                                 ],
@@ -550,6 +543,7 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
       onTap: () => Get.toSkinConditionDetail(title),
       child: Container(
         width: 200,
+        height: 200,
         margin: const EdgeInsets.only(right: 16),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -589,7 +583,7 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
                   const SizedBox(height: 4),
                   Text(
                     description,
-                    maxLines: 1,
+                    maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 12,

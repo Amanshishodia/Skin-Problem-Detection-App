@@ -226,8 +226,8 @@ class NearbyDoctorController extends GetxController {
               '?keyword=Dermatalogist'
               '&location=$lat,$lng'
               '&name=Dermatalogist'
-              '&radius=5000'
-              '&key=AlzaSyLLo_LNywH6Kpl2bNdurZwpA-zQSM5HC2b'
+              '&radius=10000'
+              '&key=AIzaSyDoh1cMs5SMz09PQT_NOBF6VYICYJqHSbQ'
       );
 
       final response = await http.get(url).timeout(

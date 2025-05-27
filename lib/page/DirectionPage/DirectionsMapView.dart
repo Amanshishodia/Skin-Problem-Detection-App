@@ -1,9 +1,7 @@
-// directions_map_view.dart
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:get/get.dart';
 import 'controller/directionController.dart';
-
 
 class DirectionsMapView extends StatelessWidget {
   final double destinationLat;
@@ -27,6 +25,16 @@ class DirectionsMapView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Directions to $doctorName'),
+        actions: [
+          // Debug button to manually fit camera
+          IconButton(
+            icon: const Icon(Icons.center_focus_strong),
+            onPressed: () {
+              controller.manualFitCamera();
+            },
+            tooltip: 'Fit to Route',
+          ),
+        ],
       ),
       body: Stack(
         children: [
@@ -69,22 +77,53 @@ class DirectionsMapView extends StatelessWidget {
             }
             return const SizedBox.shrink();
           }),
+          // Debug info overlay
+          Positioned(
+            bottom: 16,
+            left: 16,
+            child: Obx(() => Card(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text('Markers: ${controller.markers.length}'),
+                    Text('Polylines: ${controller.polylines.length}'),
+                    Text('Loading: ${controller.isLoading}'),
+                  ],
+                ),
+              ),
+            )),
+          ),
         ],
       ),
     );
   }
 
   Widget _buildGoogleMap(DirectionsController controller) {
-    return Obx(() => GoogleMap(
-      initialCameraPosition: CameraPosition(
-        target: LatLng(destinationLat, destinationLng),
-        zoom: 12,
-      ),
-      markers: controller.markers,
-      polylines: controller.polylines,
-      onMapCreated: controller.onMapCreated,
-      myLocationEnabled: true,
-      myLocationButtonEnabled: true,
-    ));
+    return Obx(() {
+      print('Building GoogleMap - Markers: ${controller.markers.length}, Polylines: ${controller.polylines.length}');
+      print('Is Loading: ${controller.isLoading}, Error: ${controller.errorMessage}');
+
+      return GoogleMap(
+        initialCameraPosition: CameraPosition(
+          target: LatLng(destinationLat, destinationLng),
+          zoom: 12,
+        ),
+        markers: controller.markers,
+        polylines: controller.polylines,
+        onMapCreated: (GoogleMapController mapController) {
+          print('Map created successfully');
+          controller.onMapCreated(mapController);
+        },
+        myLocationEnabled: true,
+        myLocationButtonEnabled: true,
+        mapType: MapType.normal,
+        onTap: (LatLng latLng) {
+          print('Map tapped at: $latLng');
+        },
+      );
+    });
   }
 }
